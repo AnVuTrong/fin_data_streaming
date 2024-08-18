@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "fin-data-streaming"
+version = "0.1.0"
+description = "For financial data streaming demo project"
+authors = ["AnVuTrong <vta.bsn@gmail.com>"]
+license = "None"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
