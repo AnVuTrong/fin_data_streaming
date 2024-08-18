@@ -6,23 +6,17 @@ from src.request.httpx.httpx_request import HTTPXRequest
 logger = Logger("HTTPXRequestTest").get_logger()
 
 @pytest.mark.asyncio
-async def test_httpx_request_dict_success(mocker):
+async def test_httpx_request_dict_success():
     request_url = "https://jsonplaceholder.typicode.com/todos/1"
-    mock_response = {
+    mock_response_data = {
         "userId": 1,
         "id": 1,
         "title": "delectus aut autem",
         "completed": False
     }
 
-    # Mock the httpx.AsyncClient.get method to return a mock response
-    mocker.patch(
-        "httpx.AsyncClient.get",
-        return_value=httpx.Response(200, json=mock_response)
-    )
-
     httpx_request = HTTPXRequest()
     result = await httpx_request.httpx_request_dict(request_url)
 
-    assert result == mock_response
+    assert result == mock_response_data
     logger.info(f"Test success: {result}")
