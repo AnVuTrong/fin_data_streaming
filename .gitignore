@@ -168,3 +168,4 @@ cython_debug/
 /.idea/inspectionProfiles/Project_Default.xml
 /.idea/vcs.xml
 /.idea/.gitignore
+/.idea/runConfigurations/fin_data_streaming.xml

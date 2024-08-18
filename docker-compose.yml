@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fin_data_streaming_api
+    environment:
+      PORT: 7777
+    ports:
+      - '7777:7777'
+    restart: "on-failure"
