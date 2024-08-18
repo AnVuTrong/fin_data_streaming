@@ -3,11 +3,11 @@ import os
 from logging.handlers import RotatingFileHandler
 
 class Logger:
-    def __init__(self, operation_name: str):
+    def __init__(self, operation_name: str, directory: str=""):
         self.operation_name = operation_name
         self.src_path = os.path
         self.src_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        self.log_dir = os.path.join(self.src_path, "logs")
+        self.log_dir = os.path.join(self.src_path, "logs", directory)
 
         # Ensure the logs directory exists
         os.makedirs(self.log_dir, exist_ok=True)

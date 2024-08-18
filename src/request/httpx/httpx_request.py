@@ -25,4 +25,4 @@ class HTTPXRequest:
 				if attempt < 2:
 					await asyncio.sleep(1)
 				else:
-					return {}, {}
+					return {}
