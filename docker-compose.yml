@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: fin_data_streaming_api
+    container_name: fin_data_streaming_app
     environment:
       PORT: 7777
     ports:

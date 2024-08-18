@@ -1,1 +1,1 @@
-print(f"hello world, This is the main.py")
+print(f"Docker is ready")
